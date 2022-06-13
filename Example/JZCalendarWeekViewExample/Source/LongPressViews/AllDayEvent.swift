@@ -7,6 +7,7 @@
 //
 
 import JZCalendarWeekView
+import Foundation
 
 class AllDayEvent: JZAllDayEvent {
 

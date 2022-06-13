@@ -13,7 +13,7 @@ open class JZColumnHeader: UICollectionReusableView {
 
     public var lblDay = UILabel()
     public var lblWeekday = UILabel()
-    let calendarCurrent = Calendar.current
+    public let calendarCurrent = Calendar.current
     public var dateFormatter = DateFormatter()
 
     public override init(frame: CGRect) {
@@ -40,7 +40,7 @@ open class JZColumnHeader: UICollectionReusableView {
         lblWeekday.font = UIFont.systemFont(ofSize: 12)
     }
 
-    public func updateView(date: Date) {
+    open func updateView(date: Date) {
         let weekday = calendarCurrent.component(.weekday, from: date) - 1
 
         lblDay.text = String(calendarCurrent.component(.day, from: date))
